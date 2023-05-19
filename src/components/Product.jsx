@@ -5,7 +5,7 @@ import { addProduct } from "../redux/actions/product";
 const Product = ({ product, handleDrawer }) => {
   const [images, setImages] = useState([]);
   const [active, setActive] = useState(null);
-  const [activeSize, setActiveSize] = useState("xs");
+  const [activeSize, setActiveSize] = useState("XS");
   const sizes = ["XS", "S", "M", "L", "XL"];
 
   const dispatch = useDispatch();
