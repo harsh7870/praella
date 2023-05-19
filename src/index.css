@@ -15,7 +15,6 @@ ul > li {
   list-style-type: none;
 }
 
-
 /*-----------------------------Header------------------------------*/
 header {
   text-align: center;
@@ -100,11 +99,26 @@ header > p {
   background: #fff;
   cursor: pointer;
 }
+.container > .product > .size {
+  display: grid;
+  grid-template-columns: repeat(5, 2.2rem);
+  gap: 0.6rem;
+}
+.container > .product > .size > li {
+  border: 1px solid #333333;
+  padding: 0.4rem 0;
+  text-align: center;
+  color: #333333;
+  cursor: pointer;
+}
+.container > .product > .size > .active {
+  color: #fff;
+  background: #333333;
+}
 
 /*-----------------------------container------------------------------*/
 
 /*-----------------------------Sidebar------------------------------*/
-
 
 .sidebar {
   width: 400px;
@@ -267,7 +281,7 @@ header > p {
     max-width: 100%;
     padding: 0 1rem;
   }
-  header{
+  header {
     margin-top: 3rem;
   }
 }

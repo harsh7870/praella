@@ -5,6 +5,8 @@ import { addProduct } from "../redux/actions/product";
 const Product = ({ product, handleDrawer }) => {
   const [images, setImages] = useState([]);
   const [active, setActive] = useState(null);
+  const [activeSize, setActiveSize] = useState("xs");
+  const sizes = ["XS", "S", "M", "L", "XL"];
 
   const dispatch = useDispatch();
 
@@ -46,6 +48,11 @@ const Product = ({ product, handleDrawer }) => {
         <span>{product.title}</span>
         <span className="price">${product?.variants[0]?.price}</span>
       </div>
+      <ul className="size">
+        {sizes.map((size) => (
+          <li className={activeSize === size && "active"} onClick={()=> setActiveSize(size)} >{size}</li>
+        ))}
+      </ul>
       <ul>
         {images.map((item) => (
           <li key={item.id} onClick={() => handleClick(item)}>
